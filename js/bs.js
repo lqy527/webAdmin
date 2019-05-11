@@ -21,6 +21,9 @@ var goIndex=function () {
     points[index].className='point active';
     items[index].className='item active';
 };
+function gitTest() {
+    
+}
 var goNext=function () {
     if (index<3){
         index++;
