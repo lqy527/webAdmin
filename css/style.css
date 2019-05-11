@@ -1,0 +1,670 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+}
+/*导航开始*/
+#denglu{
+    width: 1519px;
+    background-image: url("../image/背景图.png");
+    background-size:100% 100% ;
+    position: absolute;
+}
+
+#daohang{
+    height: 100px;
+    width: 1100px;
+    /*border: 1px solid  red;*/
+    margin: 0 auto;
+}
+.logo{
+    height:50px;
+    width: 250px;
+    margin: 25px auto;
+    background-image:url("../image/haidalogo.jpg");
+    background-size:100% 100% ;
+    position:absolute;
+    display: block;
+}
+
+.wenzi{
+    display: block;
+    height: 50px;
+    width: 600px;
+    margin:20px 0px 20px 270px;
+    font-size: 50px;
+    color: black;
+    font-family: 楷体 ;
+    position:absolute;
+
+}
+/*导航结束*/
+#body{
+    width: 1100px;
+    /*border: 1px solid  red;*/
+    margin: 2px auto;
+    background-image: url(../image/背景图.png);
+    background-size:100% 100% ;
+
+}
+
+
+/*登陆窗口开始*/
+#zhuche{
+    height: 300px;
+    width: 250px;
+    /*border: 5px groove cadetblue;*/
+    display: inline-block;
+    margin-top: 30px;
+    box-shadow: 0 0 5px 3px #aaa;
+    border-radius: 8px;
+    vertical-align:top;
+    margin-left: 10px;
+}
+
+.float-l{float: left;}
+
+#zhuche ul{
+    padding-top:40px;list-style:none
+
+}
+
+#zhuche ul li{
+    height: 50px;
+}
+
+#zhuche ul li span {
+    width: 55px;
+    line-height: 25px;
+    text-align: right;
+    padding: 0 5px;
+    font-family: 微软雅黑;
+}
+#zhuche ul li input{
+    width: 130px;
+    height: 25px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding-left: 10px;
+}
+
+.clearfix:after{
+    contain: none;
+    display: block;
+    clear: both;
+
+}
+.zhuchetiao{
+    width: 250px;
+    height: 40px;
+    background-color: #dddddd;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    color:white;
+    font-family: 楷体;
+}
+.submit{
+    float: left;
+    width: 70px;
+    height: 30px;
+    border-radius: 6px;
+    margin-left: 40px;
+    background-color:deepskyblue;
+    cursor: pointer;//改变鼠标的显示方式
+}
+.f-password{
+    float: left;
+    margin-left: 150px;
+    text-align: right;
+    color: lightslategrey;
+    text-decoration:none;
+    margin-top: 15px;
+}
+/*登陆窗口结束*/
+
+
+/*照片轮播开始*/
+#lunbobk{
+    height: 320px;
+    width: 766px;
+    /*border: 1px solid  red;*/
+    display: inline-block;
+    background-image: url("../image/轮播图边框.jpg");
+    background-size:100% 100% ;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+#lunbo{
+    height: 300px;
+    width: 700px;
+    /*border: 1px solid  red;*/
+    display: inline-block;
+    margin-left: 50px;
+    vertical-align:top;
+    margin-top: 9px;
+    position: relative;
+}
+.list{
+    width: 700px;
+    height: 300px;
+    list-style: none;
+    position: relative;
+}
+.item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.3;  //透明度
+    transition: all 0.5s; //透明度出来的动态效果
+
+}
+.item:nth-child(1){
+    background-image:url("../image/海大轮播图1.jpg");
+    background-size:100% 100% ;
+
+}
+.item:nth-child(2){
+    background-image:url("../image/海大轮播图2.jpg");
+    background-size:100% 100% ;
+
+}
+.item:nth-child(3){
+    background-image:url("../image/海大轮播图3.jpg");
+    background-size:100% 100% ;
+
+}
+.item:nth-child(4){
+    background-image:url("../image/海大轮播图4.jpg");
+    background-size:100% 100% ;
+
+}
+.btn{
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    top:100px;
+    z-index: 100;
+    line-height: 100px;
+    font-size: 70px;
+    background-color: #aaaaaa;
+    opacity: 0.1;
+
+}
+#gopre{
+    left: 0;
+}
+#gonext{
+    right: 0;
+}
+.item.active{
+    opacity: 1;
+    z-index: 10;
+}
+/*小点开始*/
+.pointList{
+    padding-left: 0;
+    list-style: none;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+}
+.point{
+    width: 10px;
+    height: 10px;
+    background-color:rgba(0,0,0,0.4);
+    border-radius: 100%;
+    float: left;
+    margin-right: 14px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255,255,255,0.6);
+    cursor: pointer;
+}
+.point.active{
+    background-color: darkorange;
+}
+/*小点结束*/
+
+/*照片轮播结束*/
+
+
+/*公告开始*/
+#gonggao{
+    height: 300px;
+    width: 250px;
+    /*border: 1px solid  red;*/
+    display: inline-block;
+    background-image: url("../image/公告栏背景图.jpg");
+    background-size:100% 100%;
+    vertical-align:top;
+}
+#gonggao div{
+    margin: 100px 40px 20px 40px;
+    line-height: 40px;
+    font-family: 楷体;
+    font-size: 18px;
+}
+
+/*公告结束*/
+
+
+/*最新新闻开始*/
+#xinwen{
+    height: 340px;
+    width: 860px;
+    /*border: 1px solid  red;*/
+    display: inline-block;
+    vertical-align:top;
+    margin-left: -20px;
+    margin-top: -15px;
+    background-image: url("../image/新闻背景.png");
+    background-size:100% 100% ;
+}
+.XwTitle{
+    height: 200px;
+    width: 25px;
+    /*border: 1px solid  red;*/
+    margin-top: 50px;
+    margin-left: 40px;
+    font-family: 楷体;
+    font-size: 25px;
+    line-height: 50px;
+    color: darkcyan;
+    display: inline-block;
+    vertical-align:top;//对齐方式
+}
+.XwContent{
+    height: 230px;
+    width: 700px;
+    /*border: 1px solid  red;*/
+    display: inline-block;
+    margin-top: 50px;
+}
+.XwContent ul{
+    /*list-style: none;*/
+    line-height: 30px;
+    margin-left: 25px;
+    font-family: 楷体;
+    color: darkcyan;
+}
+.XwContent ul li{
+    cursor: pointer;
+}
+.XwContent span{
+    display: block;
+    margin-left: 500px;
+    font-family: 楷体;
+    color: darkcyan;
+    cursor: pointer;
+}
+/*最新新闻结束*/
+
+/*版权信息开始*/
+#banquan{
+    height: 75px;
+    background-color: lightskyblue;
+    text-align: center;
+    color: dimgrey;
+    line-height: 25px;
+    font-size: 15px;
+    margin-top: -20px;
+
+
+}
+/*版权信息结束*/
+
+/*首页结束*//*首页结束*//*首页结束*//*首页结束*//*首页结束*//*首页结束*//*首页结束*//*首页结束*//*首页结束*/
+
+
+/*注册页面开始*//*注册页面开始*//*注册页面开始*//*注册页面开始*//*注册页面开始*//*注册页面开始*//*注册页面开始*/
+#LoginPage{
+    width: 1519px;
+    height: 800px;
+    background-color: ghostwhite;
+    background-size: 100% 100%;
+    padding-top: 20px;
+    display: none;
+    position: absolute;
+}
+
+#LP-navigation{
+    width: 700px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 25px;
+    line-height: 50px;
+    font-family: 楷体;
+}
+
+#LP-content{
+    width: 700px;
+    height: 700px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 5px 3px #aaa;
+    border-radius: 8px;
+}
+
+
+#LP-content ul{
+    padding-top:50px;list-style:none;
+
+
+}
+#LP-content ul li{
+    height: 60px;
+    margin-left: 150px;
+}
+
+#LP-content ul li span{
+    width: 90px;
+    line-height: 30px;
+    text-align: right;
+    font-family: 楷体;
+    display: block;
+    margin-right: 20px;
+    font-size: 20px;
+
+}
+#LP-content ul li input{
+    width: 230px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding-left: 10px;
+    box-shadow: 0 0 2px 1px #aaa;
+}
+.LP-button{
+    height: 30px;
+    width: 110px;
+    font-size: 20px;
+    font-family: 楷体;
+    border-radius: 8px;
+    margin-left: 10px;
+    background-color: cadetblue;
+    color: white;
+    cursor: pointer;
+}
+.LP-li{
+    color: deepskyblue;
+    font-size: 14px;
+    line-height: 14px;
+    list-style: none;
+    margin-left: 230px;
+}
+.LP-submit{
+    width: 140px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    border-radius: 6px;
+    margin-left: 280px;
+    margin-top: 20px;
+    background-color:deepskyblue;
+    cursor: pointer;//改变鼠标的显示方式
+}
+.LP-p{
+    font-size: 17px;
+    font-family: 楷体;
+    margin-left: 430px;
+    margin-top: 30px;
+}
+.LP-p a{
+    text-decoration:none;//清除默认下划线
+}
+
+/*注册页面结束*//*注册页面结束*//*注册页面结束*//*注册页面结束*//*注册页面结束*//*注册页面结束*//*注册页面结束*/
+
+/*主页开始*//*主页开始*//*主页开始*//*主页开始*//*主页开始*//*主页开始*//*主页开始*//*主页开始*//*主页开始*/
+
+#HomePage{
+    background-color: ghostwhite;
+    /*background-image: url(../image/风景背景图片6.jpg);*/
+    background-size: 100% 100%;
+    position: absolute;
+    display: none;
+}
+#HP-head{
+    width: 1519px;
+    height: 100px;
+}
+
+.HPH-title{
+    width: 900px;
+    height: 60px;
+    margin: 0 auto;
+    /*border: 1px solid  red;*/
+    font-size: 45px;
+    font-family:"楷体";
+    padding-top: 40px;
+    color: deepskyblue;
+}
+
+
+#HP-body{
+    width: 1519px;
+    height: 800px;
+}
+.HPB-navigation{
+    width: 900px;
+    height: 35px;
+    margin: 0 auto;
+    background-color: white;
+    /*border: 1px solid  red;*/
+    box-shadow: 0 0 5px 3px #aaa;
+    border-radius: 8px;
+}
+.HPB-navigation ul li{
+    float: left;
+    list-style: none;
+    width: 150px;
+    text-align: center;
+    line-height:35px;
+}
+.HPB-navigation ul li span{
+    cursor: pointer;
+}
+
+.HPB-photo{
+    width: 900px;
+    height: 300px;
+    margin: 35px auto;
+    /*border: 1px solid  red;*/
+    background-image: url(../image/主页相册相框.jpg);
+    background-size: 100% 105%;
+    box-shadow: 0 0 5px 3px #aaa;
+
+
+}
+.HPB-photo-L{
+    width: 132px;
+    height: 300px;
+    /*border: 1px solid  red;*/
+    float: left;
+}
+.HPB-photo-M{
+    width: 627px;
+    height: 220px;
+    /*border: 1px solid  red;*/
+    float: left;
+    margin-top: 45px;
+    overflow: hidden;
+
+}
+.HPB-photo-M ul{
+    width:3000px;
+    height: 220px;
+    background-color:black;
+    animation: move 30s linear 0s infinite normal;
+}
+.HPB-photo-M ul:hover{
+    animation-play-state: paused;
+}
+.HPB-photo-M ul:hover li{
+    opacity: 0.5;
+}
+.HPB-photo-M ul li:hover{
+    opacity: 1;
+}
+.HPB-photo-M ul li{
+    list-style: none;
+    width: 208px;
+    height:220px;
+    /*border: 1px solid  red;*/
+    float: left;
+    box-sizing: border-box;
+}
+.HPB-photo-M ul li img{
+    width: 208px;
+    height: 220px;
+}
+.HPB-photo-R{
+    width: 130px;
+    height: 300px;
+    /*border: 1px solid  red;*/
+    float: left;
+    padding-left: 10px;
+}
+.HPB-photo span{
+    display: block;
+    width: 60px;
+    height: 300px;
+    /*border: 1px solid  red;*/
+    margin-left: 40px;
+    font-size: 40px;
+    font-family: 楷体;
+    padding-top: 30px;
+    color: lightslategrey;
+}
+.HPB-notice{
+    width: 900px;
+    height: 420px;
+    margin: -10px auto;
+    /*border: 1px solid  red;*/
+    box-sizing: border-box;
+    background-color: #cccccc;
+    box-shadow: 0 0 5px 3px #aaa;
+}
+.HPB-notice-L{
+    width: 330px;
+    height: 400px;
+    /*border: 1px solid  red;*/
+    box-sizing: border-box;
+    float: left;
+    margin-left: 80px;
+
+}
+.HPB-notice-R{
+    width: 330px;
+    height: 400px;
+    /*border: 1px solid  red;*/
+    box-sizing: border-box;
+    float: left;
+    margin-left: 80px;
+}
+.HPBn-T{
+    width: 330px;
+    height: 150px;
+    /*border: 1px solid  red;*/
+    box-sizing: border-box;
+    margin-top: 30px;
+
+}
+/*.HPB-notice img{
+    width: 330px;
+    height: 150px;
+}*/
+.HPBn-ML{
+    width: 330px;
+    height: 45px;
+    /*border: 1px solid  blue;*/
+    box-sizing: border-box;
+    font-family: 方正粗黑宋简体;
+    font-size: 23px;
+    line-height: 45px;
+    color: cornflowerblue;
+    border-bottom: 1px double cornflowerblue;
+}
+.HPBn-MR{
+    width: 330px;
+    height: 45px;
+    /*border: 1px solid  blue;*/
+    box-sizing: border-box;
+    font-family: 方正粗黑宋简体;
+    font-size: 23px;
+    line-height: 45px;
+    color: chocolate;
+    border-bottom: 1px double chocolate;
+}
+.HPBn-B{
+    width: 330px;
+    height: 160px;
+    /*border: 1px solid  cornflowerblue;*/
+    box-sizing: border-box;
+
+}
+.HPBn-B li{
+    list-style: none;
+    margin-top: 10px;
+}
+.HPBn-B li a{
+    text-decoration:none;
+    color: dimgrey;
+}
+.HPBn-B li a:hover{
+    color: darkcyan;
+}
+.HPBn-B li p{
+    font-size: 13px;
+    margin-top: 5px;
+    color: dimgrey;
+}
+.HPBn-BL{
+    width: 70px;
+    height: 30px;
+    font-size: 13px;
+    color: midnightblue;
+    border-radius: 6px;
+    margin-left: 255px;
+    margin-top: 5px;
+    background-color:cornflowerblue;
+    cursor: pointer;//改变鼠标的显示方式
+}
+.HPBn-BR{
+    width: 70px;
+    height: 30px;
+    font-size: 13px;
+    color: midnightblue;
+    border-radius: 6px;
+    margin-left: 255px;
+    margin-top: 5px;
+    background-color:chocolate;
+    cursor: pointer;//改变鼠标的显示方式
+}
+
+
+#HP-foot{
+    margin-top: 40px;
+    height: 75px;
+    background-color: lightskyblue;
+    text-align: center;
+    color: dimgrey;
+    line-height: 25px;
+    font-size: 15px;
+
+}
+
+@keyframes move {
+    from{
+        margin-left: 0;
+    }
+    to{
+        margin-left: -1872px;
+    }
+    
+}
+
+
+/*主页结束*//*主页结束*//*主页结束*//*主页结束*//*主页结束*//*主页结束*//*主页结束*//*主页结束*//*主页结束*/
