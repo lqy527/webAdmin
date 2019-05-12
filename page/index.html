@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>班级管理</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="vue-app">
+        <!--登陆页面开始-->
+        <div id="denglu">
+            <!--导航开始-->
+            <div id="daohang">
+                <span class="logo"></span>
+                <span class="wenzi">毕业生班级信息网</span>
+            </div>
+            <!--导航结束-->
+            <div id="body">
+
+                <!--登陆窗口开始-->
+                <div id="zhuche" style=vertical-align:top;>
+                    <div class="zhuchetiao">登录</div>
+                    <form action="" method="">
+                        <ul>
+                            <li class="clearfix">
+                                <span class="float-l">账号</span>
+                                <input class="float-l" type="text" name="" placeholder="注册邮箱/手机号">
+                            </li>
+                            <li class="clearfix">
+                                <span class="float-l">密码</span>
+                                <input class="float-l" type="password" name="" placeholder="请输入密码">
+                            </li>
+                        </ul>
+                        <input class="submit" type="button" name="" value="登录" @click="toHomePage()">
+                        <input class="submit" type="button" name="" value="注册" @click="toLoginPage()">
+                        <!--<a href="" class="f-password">忘记密码?</a>-->
+                    </form>
+                </div>
+                <!--登陆窗口结束-->
+
+
+                <!--照片轮播开始-->
+                <div id="lunbobk">
+                    <div id="lunbo">
+                        <ul class="list">
+                            <li class="item"></li>
+                            <li class="item"></li>
+                            <li class="item"></li>
+                            <li class="item"></li>
+                        </ul>
+                        <ul class="pointList">
+                            <li class="point active" data-index="0" ></li>
+                            <li class="point" data-index="1"></li>
+                            <li class="point" data-index="2"></li>
+                            <li class="point" data-index="3"></li>
+                        </ul>
+                        <button type="button" class="btn" id="gopre"><</button>
+                        <button type="button" class="btn" id="gonext">></button>
+
+
+                    </div>
+                </div>
+                <!--照片轮播结束-->
+
+                <!--公告开始-->
+                <div id="gonggao">
+                    <div>
+                        欢迎你光临本网站！想要拥有更多特权请登录！
+                    </div>
+                </div>
+                <!--公告结束-->
+
+                <!--最新新闻开始-->
+                <div id="xinwen">
+                    <div class="XwContent">
+                        <h2>最新新闻</h2>
+                        <ul>
+                            <li @click='goArticleDetail(item.id)' v-for='item in newList'>
+                                <span>{{item.time}}</span>
+                                {{item.name}}
+
+                            </li>
+                        </ul>
+                        <!--<span>查看更多</span>-->
+                    </div>
+                </div>
+                <!--最新新闻结束-->
+
+            </div>
+
+
+            <!--版权信息开始-->
+            <div id="banquan">
+                Copyright 2019 LiuQiYuan<br>
+                All Rights Reserved
+            </div>
+            <!--版权信息结束-->
+        </div>
+        <!--登陆页面结束-->
+
+        <script src="../js/bs.js"></script>
+        <script>
+            var app = new Vue({
+                el: '#vue-app',
+                data: {
+                    newList: [
+                        {
+                            name: '班级综合网站成立啦',
+                            time: '2019-05-06',
+                            id: '123124343'
+                        },
+                        {
+                            name: '逃课一天的成本你计算过吗',
+                            time: '2019-05-06',
+                            id: '123124343'
+                        },
+                        {
+                            name: '信息学院举行第四届研究生文化节',
+                            time: '2019-05-06',
+                            id: '123124343'
+                        }, {
+                            name: '管理学院承办西藏旅游经济发展研讨班',
+                            time: '2019-05-06',
+                            id: '123124343'
+                        }, {
+                            name: '“六卓越一拔尖”计划2.0启动大会召开',
+                            time: '2019-05-06',
+                            id: '123124343'
+                        }, {
+                            name: '【中国科学报】打开多彩大学生活的别样方式',
+                            time: '2019-05-06',
+                            id: '123124343'
+                        }, {
+                            name: '深化本科教育综合改革，提高本科人才培养质量',
+                            time: '2019-05-06',
+                            id: '123124343'
+                        },
+
+
+
+                    ]
+                },
+                methods: {
+                    goArticleDetail(id) {
+                        window.open('./page/detail.html' + '?id=' + id, '_self')
+                    },
+
+                    toHomePage(){
+                        window.open('home.html', '_self')
+                    },
+                    toLoginPage(){
+                        window.open('login.html','_self')
+                    }
+                },
+            })
+        </script>
+    </div>
+</body>
+
+</html>

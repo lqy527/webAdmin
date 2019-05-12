@@ -156,7 +156,7 @@
     height: 100%;
     position: absolute;
     opacity: 0.3;  //透明度
-    transition: all 0.5s; //透明度出来的动态效果
+transition: all 0.5s; //透明度出来的动态效果
 
 }
 .item:nth-child(1){
@@ -262,56 +262,58 @@
     background-image: url("../image/新闻背景.png");
     background-size:100% 100% ;
 }
-.XwTitle{
-    height: 200px;
-    width: 25px;
-    /*border: 1px solid  red;*/
-    margin-top: 50px;
-    margin-left: 40px;
-    font-family: 楷体;
-    font-size: 25px;
-    line-height: 50px;
-    color: darkcyan;
-    display: inline-block;
-    vertical-align:top;//对齐方式
-}
+
 .XwContent{
     height: 230px;
     width: 700px;
     /*border: 1px solid  red;*/
-    display: inline-block;
+    /*display: inline-block;*/
     margin-top: 50px;
+    margin-left: 80px;
+
+}
+.XwContent h2{
+    font-family: 楷体;
+    line-height: 30px;
+    color: dimgrey;
 }
 .XwContent ul{
-    /*list-style: none;*/
-    line-height: 30px;
-    margin-left: 25px;
+    height: 200px;
+    list-style: none;
+    display: block;
+    line-height: 50px;
+    margin-left: 15px;
     font-family: 楷体;
     color: darkcyan;
+    overflow: scroll;
+
+
+
 }
 .XwContent ul li{
     cursor: pointer;
+    /*display: block;*/
 }
-.XwContent span{
-    display: block;
-    margin-left: 500px;
-    font-family: 楷体;
-    color: darkcyan;
-    cursor: pointer;
+.XwContent ul li span{
+    /*margin-left: 330px;*/
+    display: inline-block;
+    float: right;
+    margin-right: 150px;
 }
+
 /*最新新闻结束*/
 
 /*版权信息开始*/
 #banquan{
-    height: 75px;
+    height: 50px;
+    font-family: 楷体;
     background-color: lightskyblue;
     text-align: center;
     color: dimgrey;
     line-height: 25px;
     font-size: 15px;
     margin-top: -20px;
-
-
+    padding-top: 15px;
 }
 /*版权信息结束*/
 
@@ -325,8 +327,8 @@
     background-color: ghostwhite;
     background-size: 100% 100%;
     padding-top: 20px;
-    display: none;
-    position: absolute;
+    /*display: none;
+    position: absolute;*/
 }
 
 #LP-navigation{
@@ -403,7 +405,7 @@
     margin-left: 280px;
     margin-top: 20px;
     background-color:deepskyblue;
-    cursor: pointer;//改变鼠标的显示方式
+    cursor: pointer;
 }
 .LP-p{
     font-size: 17px;
@@ -424,7 +426,6 @@
     /*background-image: url(../image/风景背景图片6.jpg);*/
     background-size: 100% 100%;
     position: absolute;
-    display: none;
 }
 #HP-head{
     width: 1519px;
@@ -646,13 +647,16 @@
 
 
 #HP-foot{
-    margin-top: 40px;
-    height: 75px;
+    height: 50px;
+    font-family: 楷体;
     background-color: lightskyblue;
     text-align: center;
     color: dimgrey;
     line-height: 25px;
     font-size: 15px;
+    margin-top: 40px;
+    padding-top: 15px;
+
 
 }
 

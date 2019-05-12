@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div id="HomePage">
+        <div id="HP-head">
+            <div class="HPH-title">
+                15级电子信息科学与技术
+            </div>
+        </div>
+        <div id="HP-body">
+            <div class="HPB-navigation">
+                <ul>
+                    <li @click='changeIndex(0)'>
+                        <span :style='{color:(index===0)?"red":"black" }'>班级主页</span></li>
+                    <li @click='changeIndex(1)'><span>班级相册</span></li>
+                    <li><span>班级活动</span></li>
+                    <li><span>班级成员</span></li>
+                    <li><span>文件共享</span></li>
+                    <li><span>个人主页</span></li>
+                </ul>
+            </div>
+            <section v-if='index===0'>
+                <div class="HPB-photo">
+                    <div class="HPB-photo-L"><span>我们的相册</span></div>
+                    <div class="HPB-photo-M">
+                        <ul>
+                            <li v-for='item in imgList'>
+                                <img :src="item" alt="">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="HPB-photo-R"><span>我们的风采</span></div>
+                </div>
+
+                <div class="HPB-notice">
+                    <div class="HPB-notice-L">
+                        <div class="HPBn-T"><img src="../image/通知栏活动.jpg" alt=""></div>
+
+                        <div class="HPBn-ML">班级活动</div>
+
+                        <div class="HPBn-B">
+                            <li><a href="#">本周六组织爬佘山，大家积极报起名来</a>
+                                <p>本周六组织爬佘山，大家积极报起名来，锻炼身体义不容辞！请大家准时到达</p>
+                            </li>
+                            <li><a href="#">本周六组织爬佘山，大家积极报起名来</a>
+                                <p>本周六组织爬佘山，大家积极报起名来，锻炼身体义不容辞！请大家准时到达</p>
+                            </li>
+                            <input class="HPBn-BL" type="button" name="" value="查看更多">
+                        </div>
+                    </div>
+
+                    <div class="HPB-notice-R">
+                        <div class="HPBn-T"><img src="../image/通知栏通知.jpg" alt=""></div>
+
+                        <div class="HPBn-MR">班级通知</div>
+
+                        <div class="HPBn-B">
+                            <li><a href="#">国庆七天大假，放10月1号~7号</a>
+                                <p>国庆七天大假，放10月1号~7号，小伙伴们请安排好时间，回家的同学车票都买好了？</p>
+                            </li>
+                            <li><a href="#">国庆七天大假，放10月1号~7号</a>
+                                <p>国庆七天大假，放10月1号~7号，小伙伴们请安排好时间，回家的同学车票都买好了？</p>
+                            </li>
+                            <input class="HPBn-BR" type="button" name="" value="查看更多">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 相册 -->
+            <section v-if='index===1'>
+                hdshd
+            </section>
+        </div>
+
+
+        <div id="HP-foot">
+            Copyright 2019 LiuQiYuan<br>
+            All Rights Reserved
+        </div>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#HomePage',
+            data: {
+                index: 0,
+                imgList: [
+                    '../image/相册图片1.jpg',
+                    '../image/相册图片2.jpg',
+                    '../image/相册图片3.jpg',
+                    '../image/相册图片3.jpg',
+                    '../image/相册图片1.jpg',
+                    '../image/相册图片1.jpg',
+                ]
+            },
+            methods: {
+                changeIndex(index) {
+                    this.index = index;
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>

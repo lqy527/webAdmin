@@ -21,9 +21,6 @@ var goIndex=function () {
     points[index].className='point active';
     items[index].className='item active';
 };
-function gitTest() {
-    
-}
 var goNext=function () {
     if (index<3){
         index++;
@@ -82,44 +79,16 @@ setInterval(function () {
 
 });*/
 
-function ToLoginPage(){
-    var index=document.getElementById("LoginPage");
-    var index1=document.getElementById("denglu");
-    index1.style.display="none";
-    index.style.display="block";
-    index.style.zIndex='1001';
-}
 
-function Todenglu() {
-    var index=document.getElementById("LoginPage");
-    var index1=document.getElementById("denglu");
-    index.style.display="none";
-    index1.style.display="block";
-}
 
-function firm() {
-    //利用对话框返回的值 （true 或者 false）
-    if (confirm("注册成功,是否返回首页去登录？")) {
-        /*alert("返回首页中.........");*/
-        Todenglu();
-    }
-else {
-        /*alert("点击了取消");*/
-    }
-}
 
-function GetCode(){
-    alert("我们已将验证码信息下发至您的手机，请耐心等待！");
+
 
 }
 /*注册页面跳转结束*//*注册页面跳转结束*//*注册页面跳转结束*//*注册页面跳转结束*//*注册页面跳转结束*//*注册页面跳转结束*/
 
 /*主页跳转开始*//*主页跳转开始*//*主页跳转开始*//*主页跳转开始*//*主页跳转开始*//*主页跳转开始*//*主页跳转开始*/
-function ToHomePage() {
-    var index = document.getElementById("HomePage");
-    var index1 = document.getElementById("denglu");
-    index1.style.display = "none";
-    index.style.display = "block";
-    index.style.zIndex = '1002';
+function toHomePage() {
+    window.open('home.html', '_self')
 }
 /*主页跳转结束*//*主页跳转结束*//*主页跳转结束*//*主页跳转结束*//*主页跳转结束*//*主页跳转结束*//*主页跳转结束*/
