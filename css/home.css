@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+
+}
+#HomePage{
+    background-color: ghostwhite;
+    /*background-image: url(../image/风景背景图片6.jpg);*/
+    /* position: absolute;*/
+}
+#HP-head{
+    width: 1519px;
+    height: 100px;
+}
+
+.HPH-title{
+    width: 900px;
+    height: 60px;
+    margin: 0 auto;
+    /*border: 1px solid  red;*/
+    font-size: 45px;
+    font-family:"楷体";
+    padding-top: 40px;
+    color: deepskyblue;
+}
+
+
+#HP-body{
+    width: 1519px;
+    height: 800px;
+}
+.HPB-navigation{
+    width: 900px;
+    height: 35px;
+    margin: 0 auto;
+    background-color: white;
+    /*border: 1px solid  red;*/
+    box-shadow: 0 0 5px 3px #aaa;
+    border-radius: 8px;
+}
+.HPB-navigation ul li{
+    float: left;
+    list-style: none;
+    width: 150px;
+    text-align: center;
+    line-height:35px;
+}
+.HPB-navigation ul li span{
+    cursor: pointer;
+}
+
+.HPB-photo{
+    width: 900px;
+    height: 300px;
+    margin: 35px auto;
+    /*border: 1px solid  red;*/
+    background-image: url(../image/主页相册相框.jpg);
+    background-size: 100% 105%;
+    box-shadow: 0 0 5px 3px #aaa;
+
+
+}
+.HPB-photo-L{
+    width: 132px;
+    height: 300px;
+    /*border: 1px solid  red;*/
+    float: left;
+}
+.HPB-photo-M{
+    width: 627px;
+    height: 220px;
+    /*border: 1px solid  red;*/
+    float: left;
+    margin-top: 45px;
+    overflow: hidden;
+
+}
+.HPB-photo-M ul{
+    width:3000px;
+    height: 220px;
+    background-color:black;
+    animation: move 30s linear 0s infinite normal;
+}
+.HPB-photo-M ul:hover{
+    animation-play-state: paused;
+}
+.HPB-photo-M ul:hover li{
+    opacity: 0.5;
+}
+.HPB-photo-M ul li:hover{
+    opacity: 1;
+}
+.HPB-photo-M ul li{
+    list-style: none;
+    width: 208px;
+    height:220px;
+    /*border: 1px solid  red;*/
+    float: left;
+    box-sizing: border-box;
+}
+.HPB-photo-M ul li img{
+    width: 208px;
+    height: 220px;
+}
+.HPB-photo-R{
+    width: 130px;
+    height: 300px;
+    /*border: 1px solid  red;*/
+    float: left;
+    padding-left: 10px;
+}
+.HPB-photo span{
+    display: block;
+    width: 60px;
+    height: 300px;
+    /*border: 1px solid  red;*/
+    margin-left: 40px;
+    font-size: 40px;
+    font-family: 楷体;
+    padding-top: 30px;
+    color: lightslategrey;
+}
+.HPB-notice{
+    width: 900px;
+    height: 420px;
+    margin: -10px auto;
+    /*border: 1px solid  red;*/
+    box-sizing: border-box;
+    background-color: #cccccc;
+    box-shadow: 0 0 5px 3px #aaa;
+}
+.HPB-notice-L{
+    width: 330px;
+    height: 400px;
+    /*border: 1px solid  red;*/
+    box-sizing: border-box;
+    float: left;
+    margin-left: 80px;
+
+}
+.HPB-notice-R{
+    width: 330px;
+    height: 400px;
+    /*border: 1px solid  red;*/
+    box-sizing: border-box;
+    float: left;
+    margin-left: 80px;
+}
+.HPBn-T{
+    width: 330px;
+    height: 150px;
+    /*border: 1px solid  red;*/
+    box-sizing: border-box;
+    margin-top: 30px;
+
+}
+/*.HPB-notice img{
+    width: 330px;
+    height: 150px;
+}*/
+.HPBn-ML{
+    width: 330px;
+    height: 45px;
+    /*border: 1px solid  blue;*/
+    box-sizing: border-box;
+    font-family: 方正粗黑宋简体;
+    font-size: 23px;
+    line-height: 45px;
+    color: cornflowerblue;
+    border-bottom: 1px double cornflowerblue;
+}
+.HPBn-MR{
+    width: 330px;
+    height: 45px;
+    /*border: 1px solid  blue;*/
+    box-sizing: border-box;
+    font-family: 方正粗黑宋简体;
+    font-size: 23px;
+    line-height: 45px;
+    color: chocolate;
+    border-bottom: 1px double chocolate;
+}
+.HPBn-B{
+    width: 330px;
+    height: 160px;
+    /*border: 1px solid  cornflowerblue;*/
+    box-sizing: border-box;
+
+}
+.HPBn-B li{
+    list-style: none;
+    margin-top: 10px;
+}
+.HPBn-B li a{
+    text-decoration:none;
+    color: dimgrey;
+}
+.HPBn-B li a:hover{
+    color: darkcyan;
+}
+.HPBn-B li p{
+    font-size: 13px;
+    margin-top: 5px;
+    color: dimgrey;
+}
+.HPBn-BL{
+    width: 70px;
+    height: 30px;
+    font-size: 13px;
+    color: midnightblue;
+    border-radius: 6px;
+    margin-left: 255px;
+    margin-top: 5px;
+    background-color:cornflowerblue;
+    cursor: pointer;//改变鼠标的显示方式
+}
+.HPBn-BR{
+    width: 70px;
+    height: 30px;
+    font-size: 13px;
+    color: midnightblue;
+    border-radius: 6px;
+    margin-left: 255px;
+    margin-top: 5px;
+    background-color:chocolate;
+    cursor: pointer;//改变鼠标的显示方式
+}
+
+
+#HP-foot{
+    height: 50px;
+    font-family: 楷体;
+    background-color: lightskyblue;
+    text-align: center;
+    color: dimgrey;
+    line-height: 25px;
+    font-size: 15px;
+    margin-top: 40px;
+    padding-top: 15px;
+
+
+}
+
+@keyframes move {
+    from{
+        margin-left: 0;
+    }
+    to{
+        margin-left: -1872px;
+    }
+
+}

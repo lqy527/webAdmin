@@ -7,7 +7,8 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/photo.css">
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="">
 </head>
@@ -78,18 +79,52 @@
                         </div>
                     </div>
                 </div>
+
+                <div id="HP-foot">
+                    Copyright 2019 LiuQiYuan<br>
+                    All Rights Reserved
+                </div>
             </section>
             <!-- 相册 -->
             <section v-if='index===1'>
-                hdshd
+                <div class="photo">
+                    <div class="title">默认相册集</div>
+                    <ul>
+                        <li v-for='item in imgList'>
+                            <img :src="item" alt="">
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="photo" >
+                    <div class="title">毕业照相册集</div>
+                    <ul>
+                        <li v-for='item in photoList'>
+                            <img :src="item" alt="">
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="photo" >
+                    <div class="title">聚会相册集</div>
+                    <ul>
+                        <li v-for='item in photoList'>
+                            <img :src="item" alt="">
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div id="HP-foot">
+                    Copyright 2019 LiuQiYuan<br>
+                    All Rights Reserved
+                </div>
             </section>
         </div>
 
 
-        <div id="HP-foot">
-            Copyright 2019 LiuQiYuan<br>
-            All Rights Reserved
-        </div>
+
+
     </div>
     <script>
         var app = new Vue({
@@ -100,9 +135,46 @@
                     '../image/相册图片1.jpg',
                     '../image/相册图片2.jpg',
                     '../image/相册图片3.jpg',
+                    '../image/相册图片4.jpg',
+                    '../image/相册图片5.jpg',
+                    '../image/相册图片6.jpg',
+                    '../image/相册图片7.jpg',
+                    '../image/相册图片8.jpg',
+                    '../image/相册图片9.jpg',
+                    '../image/相册图片1.jpg',
+                    '../image/相册图片2.jpg',
                     '../image/相册图片3.jpg',
+                ],
+                photoList: [
                     '../image/相册图片1.jpg',
+                    '../image/相册图片2.jpg',
+                    '../image/相册图片3.jpg',
+                    '../image/相册图片4.jpg',
+                    '../image/相册图片5.jpg',
+                    '../image/相册图片6.jpg',
+                    '../image/相册图片7.jpg',
+                    '../image/相册图片8.jpg',
+                    '../image/相册图片9.jpg',
                     '../image/相册图片1.jpg',
+                    '../image/相册图片2.jpg',
+                    '../image/相册图片3.jpg',
+                    '../image/相册图片4.jpg',
+                    '../image/相册图片5.jpg',
+                    '../image/相册图片6.jpg',
+                    '../image/相册图片7.jpg',
+                    '../image/相册图片3.jpg',
+                    '../image/相册图片4.jpg',
+                    '../image/相册图片5.jpg',
+                    '../image/相册图片6.jpg',
+                    '../image/相册图片7.jpg',
+                    '../image/相册图片8.jpg',
+                    '../image/相册图片9.jpg',
+                    '../image/相册图片1.jpg',
+                    '../image/相册图片2.jpg',
+                    '../image/相册图片3.jpg',
+                    '../image/相册图片4.jpg',
+                    '../image/相册图片5.jpg',
+
                 ]
             },
             methods: {

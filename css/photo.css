@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+}
+#HP-body section{
+    background-color:ghostwhite;
+}
+.photo{
+    width: 900px;
+    height: 450px;
+    margin: 25px auto;
+}
+.title{
+    font-size: 20px;
+    /*background-color: #aaaaaa;*/
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #aaaaaa;
+}
+.photo ul{
+    width: 900px;
+    height: 410px;
+    overflow: scroll;
+}
+.photo ul li{
+    list-style: none;
+    width: 155px;
+    height: 180px;
+    margin: 10px 10px;
+    background-color: #fff;
+    float: left;
+}
+.photo ul li img{
+    width: 155px;
+    height: 180px;
+}
