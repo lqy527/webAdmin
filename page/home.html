@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/photo.css">
+    <link rel="stylesheet" href="../css/member.css">
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="">
 </head>
@@ -25,11 +26,14 @@
                 <ul>
                     <li @click='changeIndex(0)'>
                         <span :style='{color:(index===0)?"red":"black" }'>班级主页</span></li>
-                    <li @click='changeIndex(1)'><span>班级相册</span></li>
-                    <li><span>班级活动</span></li>
-                    <li><span>班级成员</span></li>
-                    <li><span>文件共享</span></li>
-                    <li><span>个人主页</span></li>
+                    <li @click='changeIndex(1)'>
+                        <span :style='{color:(index===1)?"red":"black" }'>班级相册</span></li>
+                    <li @click='changeIndex(2)'>
+                        <span :style='{color:(index===2)?"red":"black" }'>班级成员</span></li>
+                    <li @click='changeIndex(3)'>
+                        <span :style='{color:(index===3)?"red":"black" }'>个人主页</span></li>
+                    <li @click='changeIndex(4)'>
+                        <span :style='{color:(index===4)?"red":"black" }'>文件共享</span></li>
                 </ul>
             </div>
             <section v-if='index===0'>
@@ -80,7 +84,7 @@
                     </div>
                 </div>
 
-                <div id="HP-foot">
+                <div class="HP-foot">
                     Copyright 2019 LiuQiYuan<br>
                     All Rights Reserved
                 </div>
@@ -113,13 +117,32 @@
                         </li>
                     </ul>
                 </div>
-
-
-                <div id="HP-foot">
+                <div class="HP-foot">
                     Copyright 2019 LiuQiYuan<br>
                     All Rights Reserved
                 </div>
             </section>
+            <!--班级成员-->
+            <section v-if='index===2'>
+                <div id="member">
+                    <div class="members" v-for='item in memberList'>
+                        <li >
+                            <img :src="item.image" alt="">
+                        </li>
+                        <span>{{item.name}}</span>
+                    </div>
+                </div>
+                <div class="HP-foot">
+                    Copyright 2019 LiuQiYuan<br>
+                    All Rights Reserved
+                </div>
+            </section>
+            <!--个人主页-->
+            <section v-if='index===3'>个人主页</section>
+            <!--文件共享-->
+            <section v-if='index===4'>文件</section>
+
+
         </div>
 
 
@@ -175,7 +198,118 @@
                     '../image/相册图片4.jpg',
                     '../image/相册图片5.jpg',
 
-                ]
+                ],
+                memberList:[
+                    {
+                        name:'赵某某',
+                        image:'../image/科比头像.jpg',
+                    },
+                    {
+                        name:'钱某某',
+                        image:'../image/成员头像1.jpg',
+                    },
+                    {
+                        name:'孙某某',
+                        image:'../image/成员头像2.jpg',
+                    },
+                    {
+                        name:'李某某',
+                        image:'../image/成员头像3.jpg',
+                    },
+                    {
+                        name:'周某某',
+                        image:'../image/成员头像4.jpg',
+                    },
+                    {
+                        name:'吴某某',
+                        image:'../image/成员头像5.jpg',
+                    },
+                    {
+                        name:'郑某某',
+                        image:'../image/成员头像6.jpg',
+                    },
+                    {
+                        name:'王某某',
+                        image:'../image/成员头像7.jpg',
+                    },
+                    {
+                        name:'冯某某',
+                        image:'../image/成员头像8.jpg',
+                    },
+                    {
+                        name:'陈某某',
+                        image:'../image/成员头像9.jpg',
+                    },
+                    {
+                        name:'储某某',
+                        image:'../image/成员头像10.jpg',
+                    },
+                    {
+                        name:'卫某某',
+                        image:'../image/成员头像11.jpg',
+                    },
+                    {
+                        name:'库里',
+                        image:'../image/成员头像4.jpg',
+                    },
+                    {
+                        name:'库里',
+                        image:'../image/成员头像4.jpg',
+                    },
+                    {
+                        name:'库里',
+                        image:'../image/成员头像4.jpg',
+                    },
+                    {
+                        name:'库里',
+                        image:'../image/成员头像4.jpg',
+                    },
+                    {
+                        name:'库里',
+                        image:'../image/成员头像4.jpg',
+                    },
+                    {
+                        name:'库里',
+                        image:'../image/成员头像4.jpg',
+                    },
+                    {
+                        name:'库里',
+                        image:'../image/成员头像4.jpg',
+                    },
+                    {
+                        name:'库里',
+                        image:'../image/成员头像4.jpg',
+                    },
+                    {
+                        name:'库里',
+                        image:'../image/成员头像4.jpg',
+                    },
+                    {
+                        name:'库里',
+                        image:'../image/成员头像4.jpg',
+                    },
+                    {
+                        name:'库里',
+                        image:'../image/成员头像4.jpg',
+                    },
+                    {
+                        name:'库里',
+                        image:'../image/成员头像4.jpg',
+                    },
+                    {
+                        name:'库里',
+                        image:'../image/成员头像4.jpg',
+                    },
+                    {
+                        name:'库里',
+                        image:'../image/成员头像4.jpg',
+                    },
+                    {
+                        name:'库里',
+                        image:'../image/成员头像4.jpg',
+                    },
+
+                ],
             },
             methods: {
                 changeIndex(index) {
