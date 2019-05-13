@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+}
+#personal{
+    width: 900px;
+    margin: 25px auto;
+    padding-top: 10px;
+    background-image: url(../image/个人主页背景图片.jpg);
+}
+.pTitle{
+    height: 50px;
+    text-align: center;
+    font-family:楷体;
+    margin: 25px auto;
+    /*background-color: #cccccc;*/
+}
+.information{
+    width: 600px;
+    height: 550px;
+    margin-top: 80px;
+    display: inline-block;
+    vertical-align:top;
+}
+.information ul{
+    list-style: none;
+}
+.information ul li{
+    height: 65px;
+    font-size: 20px;
+    font-family: 楷体;
+    margin-left: 100px;
+}
+.changeInformation .information ul li input{
+    height: 30px;
+    width: 379px;
+    outline:none;
+    font-size: 20px;
+    margin-left: -9px;
+    font-family: 楷体;
+    background-image: url(../image/个人主页背景图片.jpg);
+}
+.information button{
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    font-family: 楷体;
+    margin-left: 100px;
+}
+.headPortrait{
+    width: 150px;
+    height: 200px;
+    display: inline-block;
+    vertical-align:top;
+    /*background-color: #cccccc;*/
+}
+.names{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 楷体;
+}
+.images{
+    width: 150px;
+    height: 150px;
+}
+.images img{
+    width: 150px;
+    height: 150px;
+}
+.changeInformation{
+    width: 600px;
+    height: 550px;
+    margin-top: -633px;
+    position: absolute;
+}
+
+.btn{
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    font-family: 楷体;
+    margin-left: 400px;
+    margin-bottom: 40px;
+}
+.btn1{
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    font-family: 楷体;
+    margin-left: -100px;
+    position: absolute;
+}
+
