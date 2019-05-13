@@ -195,9 +195,9 @@
                         </div>
                     </div>
                     <div class="pTitle"><h1>私人相册</h1><h2>private albums</h2></div>
-                    <button class="btn" @click='changeShow()'>查看相册</button>
-                    <button class="btn1" @click='changeShowing()' v-if="show">收起相册</button>
-                    <div class="photo" v-if="show">
+                    <button class="btn" @click='changePShow()'>查看相册</button>
+                    <button class="btn1" @click='changePShowing()' v-if="photoShow">收起相册</button>
+                    <div class="photo" v-if="photoShow">
                         <ul>
                             <li v-for='item in imgList'>
                                 <img :src="item" alt="">
@@ -211,7 +211,7 @@
                 </div>
             </section>
             <!--文件共享-->
-            <section v-if='index===4'>文件</section>
+            <section v-if='index===4'>文件共享</section>
         </div>
 
     </div>
@@ -219,6 +219,7 @@
         var app = new Vue({
             el: '#HomePage',
             data: {
+                photoShow:false,
                 show:false,
                 index: 0,
                 imgList: [
@@ -401,7 +402,15 @@
                 changeShowing(){
                     this.show=false;
 
-                }
+                },
+                changePShow(){
+                    this.photoShow=true;
+
+                },
+                changePShowing(){
+                    this.photoShow=false;
+
+                },
             },
         });
     </script>
