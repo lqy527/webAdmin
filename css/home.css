@@ -195,6 +195,7 @@
 .HPBn-B li a{
     text-decoration:none;
     color: dimgrey;
+    cursor: pointer;
 }
 .HPBn-B li a:hover{
     color: darkcyan;
