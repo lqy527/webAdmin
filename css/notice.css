@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+}
+.notice{
+    width: 900px;
+    margin: 25px auto;
+}
+.noticeTitle{
+    width: 300px;
+    height: 700px;
+    float: left;
+   /* background-color: cadetblue;*/
+}
+.titleNotice{
+    width: 300px;
+    height: 200px;
+    border: 1px solid #aaaaaa;
+}
+.tnTitle{
+    height: 50px;
+    font-family: 楷体;
+    font-size: 25px;
+    line-height: 50px;
+    padding-left: 25px;
+    color: white;
+    background-color: cornflowerblue;
+}
+.tnContent{
+    width: 300px;
+    height: 150px;
+    overflow: auto;
+}
+
+.tnContent li{
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    margin-left: 20px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+
+}
+.titleActivity{
+    width: 300px;
+    height: 200px;
+    margin-top:25px;
+    border: 1px solid #aaaaaa;
+}
+.taTitle{
+    height: 50px;
+    font-family: 楷体;
+    font-size: 25px;
+    line-height: 50px;
+    padding-left: 25px;
+    color: white;
+    background-color: chocolate;
+}
+.taContent{
+    width: 300px;
+    height: 150px;
+    overflow: auto;
+}
+.taContent li{
+    list-style: none;
+    height: 45px;
+    width: 255px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    line-height: 45px;
+    margin-left: 20px;
+
+}
+.noticeContent{
+    width: 580px;
+    height: 700px;
+    float: left;
+    margin-left: 20px;
+    /*background-color: burlywood;*/
+}
+.ncTitle{
+    width: 580px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 20px;
+    border-bottom: 1px solid red;
+}
+.ncContent{
+    width: 580px;
+    margin-top: 50px;
+}
+.ncTime{
+    margin-top: 5px;
+    text-align: center;
+}

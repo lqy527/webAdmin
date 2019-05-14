@@ -21,7 +21,7 @@
 .photo ul{
     width: 900px;
     height: 410px;
-    overflow: scroll;
+    overflow: auto;
 }
 .photo ul li{
     list-style: none;

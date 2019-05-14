@@ -28,11 +28,11 @@
                         <ul>
                             <li class="clearfix">
                                 <span class="float-l">账号</span>
-                                <input class="float-l" type="text" name="" placeholder="注册邮箱/手机号">
+                                <input class="float-l" type="text" v-model="account" name="" placeholder="注册邮箱/手机号">
                             </li>
                             <li class="clearfix">
                                 <span class="float-l">密码</span>
-                                <input class="float-l" type="password" name="" placeholder="请输入密码">
+                                <input class="float-l" type="password" v-model="password" name="" placeholder="请输入密码">
                             </li>
                         </ul>
                         <input class="submit" type="button" name="" value="登录" @click="toHomePage()">
@@ -142,7 +142,9 @@
 
 
 
-                    ]
+                    ],
+                    account:'',
+                    password:'',
                 },
                 methods: {
                     goArticleDetail(id) {
@@ -150,6 +152,16 @@
                     },
 
                     toHomePage(){
+                        var isAlert = 0;
+                        if (this.account === '' && isAlert==0) {
+                            alert('请输入账号');
+                            isAlert = 1;
+                        }
+                        if (this.password === '' && isAlert==0) {
+                            alert('请输入密码');
+                            isAlert = 1;
+                        }
+                        if(this.password!= '' && this.account!= '')
                         window.open('home.html', '_self')
                     },
                     toLoginPage(){
