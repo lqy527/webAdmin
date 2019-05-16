@@ -16,6 +16,7 @@
 </head>
 
 <body>
+     <div class="exit" @click='exit()'>退出登录</div>
     <div id="HomePage">
         <div id="HP-head">
             <div class="HPH-title">
@@ -575,7 +576,11 @@
                 },
                 changeNumber(number) {
                     this.number = number;
+                },
+                exit(){
+                    window.open('../index.html', '_self');
                 }
+
             },
         });
     </script>

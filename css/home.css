@@ -4,6 +4,13 @@
     border:0;
 
 }
+.exit{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1400px;
+    color: cornflowerblue;
+    cursor: pointer;
+}
 #HomePage{
     background-color: ghostwhite;
     /*background-image: url(../image/风景背景图片6.jpg);*/
@@ -11,7 +18,7 @@
 }
 #HP-head{
     width: 1519px;
-    height: 100px;
+    height: 115px;
 }
 
 .HPH-title{

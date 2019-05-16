@@ -39,7 +39,7 @@
     font-size: 20px;
     margin-left: -9px;
     font-family: 楷体;
-    background-image: url(../image/个人主页背景图片.jpg);
+    /*background-image: url(../image/个人主页背景图片.jpg);*/
 }
 .information button{
     width: 100px;

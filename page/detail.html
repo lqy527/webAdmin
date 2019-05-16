@@ -9,26 +9,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/photo.css">
+    <link rel="stylesheet" href="../css/member.css">
+    <link rel="stylesheet" href="../css/personal data.css">
+    <link rel="stylesheet" href="../css/notice.css">
+    <link rel="stylesheet" href="../css/new.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
 </head>
 
 <body>
-    <form>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+<div id="HomePage">
+    <div id="HP-head">
+        <div class="HPH-title">
+            15级电子信息科学与技术
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div id="HP-body">
+        <div class="HPB-navigation">
+            <ul>
+                <li @click='changeIndex(0)'>
+                    <span :style='{color:(index===0)?"red":"black" }'>班级主页</span></li>
+                <li @click='changeIndex(1)'>
+                    <span :style='{color:(index===1)?"red":"black" }'>班级相册</span></li>
+                <li @click='changeIndex(2)'>
+                    <span :style='{color:(index===2)?"red":"black" }'>班级成员</span></li>
+                <li @click='changeIndex(3)'>
+                    <span :style='{color:(index===3)?"red":"black" }'>个人主页</span></li>
+                <li @click='changeIndex(4)'>
+                    <span :style='{color:(index===4)?"red":"black" }'>活动通知</span></li>
+            </ul>
         </div>
-        <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        <div id="new">
+            <div class="newTitle"><h4>班级综合网站成立啦</h4></div>
+            <div class="newContent">
+                <h5>特大喜讯</h5>
+                <p>班级综合网站今天正式成立啦</p>
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
+</div>
 </body>
 
 </html>

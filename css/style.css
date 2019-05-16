@@ -3,6 +3,7 @@
     padding: 0;
     border:0;
 }
+
 .swiper-container{
     display: inline-block;
 
@@ -38,7 +39,7 @@ height: 100%;
     height:50px;
     width: 250px;
     margin: 25px auto;
-    background-image:url("../image/haidalogo.jpg");
+    background-image:url("../image/haidalogo1.png");
     background-size:100% 100% ;
     position:absolute;
     display: block;
@@ -46,10 +47,10 @@ height: 100%;
 
 .wenzi{
     display: block;
-    height: 50px;
+    height: 40px;
     width: 600px;
-    margin:20px 0px 20px 270px;
-    font-size: 50px;
+    margin:30px 0px 20px 270px;
+    font-size: 40px;
     color: black;
     font-family: 楷体 ;
     position:absolute;
