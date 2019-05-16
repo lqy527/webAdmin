@@ -36,7 +36,7 @@
     margin: 0 auto;
     background-color: white;
     /*border: 1px solid  red;*/
-    box-shadow: 0 0 5px 3px #aaa;
+    box-shadow: 0 0 3px 0 #aaa;
     border-radius: 8px;
 }
 .HPB-navigation ul li{

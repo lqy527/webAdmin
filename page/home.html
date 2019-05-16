@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="../css/personal data.css">
     <link rel="stylesheet" href="../css/notice.css">
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <link rel="stylesheet" href="">
 </head>
 
 <body>
@@ -59,10 +58,10 @@
                         <div class="HPBn-ML">班级活动</div>
 
                         <div class="HPBn-B">
-                            <li><a  @click='changeIndex(4)'>本周六组织爬佘山，大家积极报起名来</a>
+                            <li><a @click='changeIndex(4)'>本周六组织爬佘山，大家积极报起名来</a>
                                 <p>本周六组织爬佘山，大家积极报起名来，锻炼身体义不容辞！请大家准时到达</p>
                             </li>
-                            <li><a  @click='changeIndex(4)'>师生难忘赠花活动</a>
+                            <li><a @click='changeIndex(4)'>师生难忘赠花活动</a>
                                 <p>四年的时光，四年的师生情，学生对老师的感激无法用语言来形容，
                                     特此派学生代表对老师赠花表达感激之情</p>
                             </li>
@@ -76,10 +75,10 @@
                         <div class="HPBn-MR">班级通知</div>
 
                         <div class="HPBn-B">
-                            <li><a  @click='changeIndex(4)'>关于本科生自助打印机暂停服务的通知</a>
+                            <li><a @click='changeIndex(4)'>关于本科生自助打印机暂停服务的通知</a>
                                 <p>由于教务管理服务器调整，近期本科生自助打印服务暂停，恢复服务时间另行通知。</p>
                             </li>
-                            <li><a  @click='changeIndex(4)'>学校美育工作会议顺利举行</a>
+                            <li><a @click='changeIndex(4)'>学校美育工作会议顺利举行</a>
                                 <p>学院美育工作会议在行远楼第五会议室举行</p>
                             </li>
                             <input class="HPBn-BR" type="button" name="" value="查看更多" @click='changeIndex(4)'>
@@ -103,7 +102,7 @@
                     </ul>
                 </div>
 
-                <div class="photo" >
+                <div class="photo">
                     <div class="title">毕业照相册集</div>
                     <ul>
                         <li v-for='item in photoList'>
@@ -112,7 +111,7 @@
                     </ul>
                 </div>
 
-                <div class="photo" >
+                <div class="photo">
                     <div class="title">聚会相册集</div>
                     <ul>
                         <li v-for='item in photoList'>
@@ -129,7 +128,7 @@
             <section v-if='index===2'>
                 <div id="member">
                     <div class="members" v-for='item in memberList'>
-                        <li >
+                        <li>
                             <img :src="item.image" alt="">
                         </li>
                         <span>{{item.name}}</span>
@@ -143,7 +142,10 @@
             <!--个人主页-->
             <section v-if='index===3'>
                 <div id="personal" v-for='item in personalList'>
-                    <div class="pTitle"><h1>基本信息</h1><h2>basic information</h2></div>
+                    <div class="pTitle">
+                        <h1>基本信息</h1>
+                        <h2>basic information</h2>
+                    </div>
                     <div class="information">
                         <ul>
                             <li><span>联系电话：</span><span>{{item.tel}}</span></li>
@@ -164,39 +166,42 @@
                             <ul>
                                 <li><span>联系电话：</span>
                                     <span>
-                                        <input v-model="item.tel"  placeholder="请填写电话号码">
+                                        <input v-model="item.tel" placeholder="请填写电话号码">
                                     </span>
                                 </li>
                                 <li><span>邮箱地址：</span>
                                     <span>
-                                        <input v-model="item.email"  placeholder="请填写邮箱地址">
+                                        <input v-model="item.email" placeholder="请填写邮箱地址">
                                     </span>
                                 </li>
                                 <li><span>居住地址：</span>
                                     <span>
-                                        <input v-model="item.address"  placeholder="请填写居住地址">
+                                        <input v-model="item.address" placeholder="请填写居住地址">
                                     </span>
                                 </li>
                                 <li><span>工作公司：</span>
                                     <span>
-                                        <input v-model="item.company"  placeholder="请填写工作公司">
+                                        <input v-model="item.company" placeholder="请填写工作公司">
                                     </span>
                                 </li>
                                 <li><span>工作职位：</span>
                                     <span>
-                                        <input v-model="item.position"  placeholder="请填写工作职位">
+                                        <input v-model="item.position" placeholder="请填写工作职位">
                                     </span>
                                 </li>
                                 <li><span>人生格言：</span>
                                     <span>
-                                        <input v-model="item.motto"  placeholder="请填写人生格言">
+                                        <input v-model="item.motto" placeholder="请填写人生格言">
                                     </span>
                                 </li>
                             </ul>
                             <button @click='changeShowing()'>保存信息</button>
                         </div>
                     </div>
-                    <div class="pTitle"><h1>私人相册</h1><h2>private albums</h2></div>
+                    <div class="pTitle">
+                        <h1>私人相册</h1>
+                        <h2>private albums</h2>
+                    </div>
                     <button class="btn" @click='changePShow()'>查看相册</button>
                     <button class="btn1" @click='changePShowing()' v-if="photoShow">收起相册</button>
                     <div class="photo" v-if="photoShow">
@@ -214,11 +219,11 @@
             </section>
             <!--活动通知-->
             <section v-if='index===4'>
-                <div class="notice" >
+                <div class="notice">
                     <div class="noticeTitle">
                         <div class="titleNotice">
                             <div class="tnTitle">班级活动</div>
-                            <div class="tnContent" >
+                            <div class="tnContent">
                                 <li v-for='notice in activityList1' @click='changeNumber(5)'>{{notice.title}}</li>
                                 <li v-for='notice in activityList2' @click='changeNumber(6)'>{{notice.title}}</li>
                                 <li v-for='notice in activityList3' @click='changeNumber(7)'>{{notice.title}}</li>
@@ -228,43 +233,43 @@
                         <div class="titleActivity">
                             <div class="taTitle">班级通知</div>
                             <div class="taContent">
-                                <li v-for='notice in noticeList1'@click='changeNumber(1)'>{{notice.title}}</li>
-                                <li v-for='notice in noticeList2'@click='changeNumber(2)'>{{notice.title}}</li>
-                                <li v-for='notice in noticeList3'@click='changeNumber(3)'>{{notice.title}}</li>
-                                <li v-for='notice in noticeList4'@click='changeNumber(4)'>{{notice.title}}</li>
+                                <li v-for='notice in noticeList1' @click='changeNumber(1)'>{{notice.title}}</li>
+                                <li v-for='notice in noticeList2' @click='changeNumber(2)'>{{notice.title}}</li>
+                                <li v-for='notice in noticeList3' @click='changeNumber(3)'>{{notice.title}}</li>
+                                <li v-for='notice in noticeList4' @click='changeNumber(4)'>{{notice.title}}</li>
                             </div>
                         </div>
                     </div>
                     <div class="noticeList">
-                    <section v-if='number===1'>
-                        <div class="noticeContent" v-for='notice in noticeList1'>
-                            <div class="ncTitle">{{notice.title}}</div>
-                            <div class="ncTime">{{notice.time}}</div>
-                            <div class="ncContent">{{notice.content}}</div>
-                        </div>
-                    </section>
-                    <section v-if='number===2'>
-                        <div class="noticeContent" v-for='notice in noticeList2'>
-                            <div class="ncTitle">{{notice.title}}</div>
-                            <div class="ncTime">{{notice.time}}</div>
-                            <div class="ncContent">{{notice.content}}</div>
-                        </div>
-                    </section>
-                    <section v-if='number===3'>
-                        <div class="noticeContent" v-for='notice in noticeList3'>
-                            <div class="ncTitle">{{notice.title}}</div>
-                            <div class="ncTime">{{notice.time}}</div>
-                            <div class="ncContent">{{notice.content}}</div>
-                        </div>
-                    </section>
-                    <section v-if='number===4'>
-                        <div class="noticeContent" v-for='notice in noticeList4'>
-                            <div class="ncTitle">{{notice.title}}</div>
-                            <div class="ncTime">{{notice.time}}</div>
-                            <div class="ncContent">{{notice.content}}</div>
-                        </div>
-                    </section>
-                </div>
+                        <section v-if='number===1'>
+                            <div class="noticeContent" v-for='notice in noticeList1'>
+                                <div class="ncTitle">{{notice.title}}</div>
+                                <div class="ncTime">{{notice.time}}</div>
+                                <div class="ncContent">{{notice.content}}</div>
+                            </div>
+                        </section>
+                        <section v-if='number===2'>
+                            <div class="noticeContent" v-for='notice in noticeList2'>
+                                <div class="ncTitle">{{notice.title}}</div>
+                                <div class="ncTime">{{notice.time}}</div>
+                                <div class="ncContent">{{notice.content}}</div>
+                            </div>
+                        </section>
+                        <section v-if='number===3'>
+                            <div class="noticeContent" v-for='notice in noticeList3'>
+                                <div class="ncTitle">{{notice.title}}</div>
+                                <div class="ncTime">{{notice.time}}</div>
+                                <div class="ncContent">{{notice.content}}</div>
+                            </div>
+                        </section>
+                        <section v-if='number===4'>
+                            <div class="noticeContent" v-for='notice in noticeList4'>
+                                <div class="ncTitle">{{notice.title}}</div>
+                                <div class="ncTime">{{notice.time}}</div>
+                                <div class="ncContent">{{notice.content}}</div>
+                            </div>
+                        </section>
+                    </div>
                     <div class="activityList">
                         <section v-if='number===5'>
                             <div class="noticeContent" v-for='notice in activityList1'>
@@ -305,10 +310,10 @@
         var app = new Vue({
             el: '#HomePage',
             data: {
-                photoShow:false,
-                show:false,
+                photoShow: false,
+                show: false,
                 index: 0,
-                number:5,
+                number: 5,
                 imgList: [
                     '../image/相册图片1.jpg',
                     '../image/相册图片2.jpg',
@@ -354,197 +359,197 @@
                     '../image/相册图片5.jpg',
 
                 ],
-                memberList:[
+                memberList: [
                     {
-                        name:'赵某某',
-                        image:'../image/科比头像.jpg',
+                        name: '赵某某',
+                        image: '../image/科比头像.jpg',
                     },
                     {
-                        name:'钱某某',
-                        image:'../image/成员头像1.jpg',
+                        name: '钱某某',
+                        image: '../image/成员头像1.jpg',
                     },
                     {
-                        name:'孙某某',
-                        image:'../image/成员头像2.jpg',
+                        name: '孙某某',
+                        image: '../image/成员头像2.jpg',
                     },
                     {
-                        name:'李某某',
-                        image:'../image/成员头像3.jpg',
+                        name: '李某某',
+                        image: '../image/成员头像3.jpg',
                     },
                     {
-                        name:'周某某',
-                        image:'../image/成员头像4.jpg',
+                        name: '周某某',
+                        image: '../image/成员头像4.jpg',
                     },
                     {
-                        name:'吴某某',
-                        image:'../image/成员头像5.jpg',
+                        name: '吴某某',
+                        image: '../image/成员头像5.jpg',
                     },
                     {
-                        name:'郑某某',
-                        image:'../image/成员头像6.jpg',
+                        name: '郑某某',
+                        image: '../image/成员头像6.jpg',
                     },
                     {
-                        name:'王某某',
-                        image:'../image/成员头像7.jpg',
+                        name: '王某某',
+                        image: '../image/成员头像7.jpg',
                     },
                     {
-                        name:'冯某某',
-                        image:'../image/成员头像8.jpg',
+                        name: '冯某某',
+                        image: '../image/成员头像8.jpg',
                     },
                     {
-                        name:'陈某某',
-                        image:'../image/成员头像9.jpg',
+                        name: '陈某某',
+                        image: '../image/成员头像9.jpg',
                     },
                     {
-                        name:'储某某',
-                        image:'../image/成员头像10.jpg',
+                        name: '储某某',
+                        image: '../image/成员头像10.jpg',
                     },
                     {
-                        name:'卫某某',
-                        image:'../image/成员头像11.jpg',
+                        name: '卫某某',
+                        image: '../image/成员头像11.jpg',
                     },
                     {
-                        name:'库里',
-                        image:'../image/成员头像4.jpg',
+                        name: '库里',
+                        image: '../image/成员头像4.jpg',
                     },
                     {
-                        name:'库里',
-                        image:'../image/成员头像4.jpg',
+                        name: '库里',
+                        image: '../image/成员头像4.jpg',
                     },
                     {
-                        name:'库里',
-                        image:'../image/成员头像4.jpg',
+                        name: '库里',
+                        image: '../image/成员头像4.jpg',
                     },
                     {
-                        name:'库里',
-                        image:'../image/成员头像4.jpg',
+                        name: '库里',
+                        image: '../image/成员头像4.jpg',
                     },
                     {
-                        name:'库里',
-                        image:'../image/成员头像4.jpg',
+                        name: '库里',
+                        image: '../image/成员头像4.jpg',
                     },
                     {
-                        name:'库里',
-                        image:'../image/成员头像4.jpg',
+                        name: '库里',
+                        image: '../image/成员头像4.jpg',
                     },
                     {
-                        name:'库里',
-                        image:'../image/成员头像4.jpg',
+                        name: '库里',
+                        image: '../image/成员头像4.jpg',
                     },
                     {
-                        name:'库里',
-                        image:'../image/成员头像4.jpg',
+                        name: '库里',
+                        image: '../image/成员头像4.jpg',
                     },
                     {
-                        name:'库里',
-                        image:'../image/成员头像4.jpg',
+                        name: '库里',
+                        image: '../image/成员头像4.jpg',
                     },
                     {
-                        name:'库里',
-                        image:'../image/成员头像4.jpg',
+                        name: '库里',
+                        image: '../image/成员头像4.jpg',
                     },
                     {
-                        name:'库里',
-                        image:'../image/成员头像4.jpg',
+                        name: '库里',
+                        image: '../image/成员头像4.jpg',
                     },
                     {
-                        name:'库里',
-                        image:'../image/成员头像4.jpg',
+                        name: '库里',
+                        image: '../image/成员头像4.jpg',
                     },
                     {
-                        name:'库里',
-                        image:'../image/成员头像4.jpg',
+                        name: '库里',
+                        image: '../image/成员头像4.jpg',
                     },
                     {
-                        name:'库里',
-                        image:'../image/成员头像4.jpg',
+                        name: '库里',
+                        image: '../image/成员头像4.jpg',
                     },
                     {
-                        name:'库里',
-                        image:'../image/成员头像4.jpg',
+                        name: '库里',
+                        image: '../image/成员头像4.jpg',
                     },
 
                 ],
-                personalList:[
+                personalList: [
                     {
-                        name:'刘某',
-                        tel:'18798258285',
-                        email:'liuqiyuan527@163.com',
-                        address:'广东省珠海市前山金鸡西路',
-                        company:'珠海格力电器股份有限公司',
-                        position:'电控硬件工程师',
-                        motto:'世间最容易的事是坚持，最难的事也是坚持',
-                        image:'../image/成员头像4.jpg',
+                        name: '刘某',
+                        tel: '18798258285',
+                        email: 'liuqiyuan527@163.com',
+                        address: '广东省珠海市前山金鸡西路',
+                        company: '珠海格力电器股份有限公司',
+                        position: '电控硬件工程师',
+                        motto: '世间最容易的事是坚持，最难的事也是坚持',
+                        image: '../image/成员头像4.jpg',
                     }
                 ],
-                noticeList1:[
+                noticeList1: [
                     {
-                        title:'关于本科生自助打印机暂停服务的通知',
-                        content:'由于教务管理服务器调整，近期本科生自助打印服务暂停，' +
-                        '我处已联系相关厂商尽快处理，恢复服务时间另行通知。',
-                        number:'1',
-                        time:'2019-05-10'
+                        title: '关于本科生自助打印机暂停服务的通知',
+                        content: '由于教务管理服务器调整，近期本科生自助打印服务暂停，' +
+                            '我处已联系相关厂商尽快处理，恢复服务时间另行通知。',
+                        number: '1',
+                        time: '2019-05-10'
                     },
                 ],
-                noticeList2:[
+                noticeList2: [
                     {
-                        title:'学校美育工作会议顺利举行',
-                        content:'学院美育工作会议在行远楼第五会议室举行。会议由李巍然副校长主持，' +
-                        '宣传部、教务处、团委、高教研究与评估中心、文学与新闻传播学院、' +
-                        '基础教学中心等主要负责人，相关专家学者参与座谈。',
-                        number:'1',
-                        time:'2019-05-10'
+                        title: '学校美育工作会议顺利举行',
+                        content: '学院美育工作会议在行远楼第五会议室举行。会议由李巍然副校长主持，' +
+                            '宣传部、教务处、团委、高教研究与评估中心、文学与新闻传播学院、' +
+                            '基础教学中心等主要负责人，相关专家学者参与座谈。',
+                        number: '1',
+                        time: '2019-05-10'
                     },
                 ],
-                noticeList3:[
+                noticeList3: [
                     {
-                        title:'关于开放系统补登全日制本科生监护人信息的通知',
-                        content:'教务综合信息集成服务平台监护人信息增录功能已经修复，' +
-                        '请各学院通知学生按照《关于核对、补登全日制本科生监护人信息的通知》进行填报。',
-                        number:'1',
-                        time:'2019-05-10'
+                        title: '关于开放系统补登全日制本科生监护人信息的通知',
+                        content: '教务综合信息集成服务平台监护人信息增录功能已经修复，' +
+                            '请各学院通知学生按照《关于核对、补登全日制本科生监护人信息的通知》进行填报。',
+                        number: '1',
+                        time: '2019-05-10'
                     },
                 ],
-                noticeList4:[
+                noticeList4: [
                     {
-                        title:'2019年加拿大滑铁卢大学2+2本科生教育合作项目招生通知',
-                        content:'根据我校与加拿大滑铁卢大学（University of Waterloo）的校际合作协议，' +
-                        '我校与加拿大滑铁卢大学开展本科生教育合作项目。现将有关事项通知如下：' +
-                        '...............................................................',
-                        number:'1',
-                        time:'2019-05-10'
+                        title: '2019年加拿大滑铁卢大学2+2本科生教育合作项目招生通知',
+                        content: '根据我校与加拿大滑铁卢大学（University of Waterloo）的校际合作协议，' +
+                            '我校与加拿大滑铁卢大学开展本科生教育合作项目。现将有关事项通知如下：' +
+                            '...............................................................',
+                        number: '1',
+                        time: '2019-05-10'
                     },
                 ],
-                activityList1:[
+                activityList1: [
                     {
-                        title:'师生难忘赠花活动',
-                        content:'四年的时光，四年的师生情，学生对老师的感激无法用语言来形容，' +
-                        '特此派学生代表对老师赠花表达感激之情----------组织形式待定。',
-                        time:'2019-05-10'
+                        title: '师生难忘赠花活动',
+                        content: '四年的时光，四年的师生情，学生对老师的感激无法用语言来形容，' +
+                            '特此派学生代表对老师赠花表达感激之情----------组织形式待定。',
+                        time: '2019-05-10'
                     }
                 ],
-                activityList2:[
+                activityList2: [
                     {
-                        title:'爱的奉献留校园',
-                        content:'泓清泉，涓涓流淌，滋润一方土地;一颗流星，划破黑夜，点缀一角星空;一片云彩，轻飘天际，装扮一方晴空;一只蜜蜂，掠过花丛，酿造一份甜蜜。然而，你们这群可爱的毕业生捧着一颗善心离开，在学校的最后时光发挥了你们的余热，留下了爱与奉献',
-                        time:'2019-05-10'
-                    }
-
-                ],
-                activityList3:[
-                    {
-                        title:'再见了，我的海大——感恩母校，梦想启航',
-                        content:'本科毕业生照片墙风采展示' +
-                        '毕业生辅导员录制“不说再见”V',
-                        time:'2019-05-10'
+                        title: '爱的奉献留校园',
+                        content: '泓清泉，涓涓流淌，滋润一方土地;一颗流星，划破黑夜，点缀一角星空;一片云彩，轻飘天际，装扮一方晴空;一只蜜蜂，掠过花丛，酿造一份甜蜜。然而，你们这群可爱的毕业生捧着一颗善心离开，在学校的最后时光发挥了你们的余热，留下了爱与奉献',
+                        time: '2019-05-10'
                     }
 
                 ],
-                activityList4:[
+                activityList3: [
                     {
-                        title:'本周六组织爬佘山，大家积极报起名来',
-                        content:'本周六组织爬佘山，大家积极报起名来，锻炼身体义不容辞！请大家准时到达',
-                        time:'2019-05-10'
+                        title: '再见了，我的海大——感恩母校，梦想启航',
+                        content: '本科毕业生照片墙风采展示' +
+                            '毕业生辅导员录制“不说再见”V',
+                        time: '2019-05-10'
+                    }
+
+                ],
+                activityList4: [
+                    {
+                        title: '本周六组织爬佘山，大家积极报起名来',
+                        content: '本周六组织爬佘山，大家积极报起名来，锻炼身体义不容辞！请大家准时到达',
+                        time: '2019-05-10'
                     }
 
                 ]
@@ -553,23 +558,23 @@
                 changeIndex(index) {
                     this.index = index;
                 },
-                changeShow(){
-                    this.show=true;
+                changeShow() {
+                    this.show = true;
 
                 },
-                changeShowing(){
-                    this.show=false;
+                changeShowing() {
+                    this.show = false;
 
                 },
-                changePShow(){
-                    this.photoShow=true;
+                changePShow() {
+                    this.photoShow = true;
 
                 },
-                changePShowing(){
-                    this.photoShow=false;
+                changePShowing() {
+                    this.photoShow = false;
                 },
-                changeNumber(number){
-                    this.number=number;
+                changeNumber(number) {
+                    this.number = number;
                 }
             },
         });

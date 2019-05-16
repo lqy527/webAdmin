@@ -11,105 +11,107 @@
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="">
 </head>
+
 <body>
-<div id="LoginPage">
-    <div id="LP-navigation">毕业生班级信息网欢迎您的加入！</div>
-    <div id="LP-content">
-        <ul>
-            <li>
-                <span class="float-l">姓名</span>
-                <input class="float-l" type="text" v-model='name' placeholder="请输入您的真实姓名">
-            </li>
+    <div id="LoginPage">
+        <div id="LP-navigation">毕业生班级信息网欢迎您的加入！</div>
+        <div id="LP-content">
+            <ul>
+                <li>
+                    <span class="float-l">姓名</span>
+                    <input class="float-l" type="text" v-model='name' placeholder="请输入您的真实姓名">
+                </li>
 
-            <li>
-                <span class="float-l">毕业学校</span>
-                <input class="float-l" type="text" v-model='school' placeholder="请正确输入您的学校名称">
-            </li>
+                <li>
+                    <span class="float-l">毕业学校</span>
+                    <input class="float-l" type="text" v-model='school' placeholder="请正确输入您的学校名称">
+                </li>
 
-            <li>
-                <span class="float-l">毕业班级</span>
-                <input class="float-l" type="text" v-model='GClass' placeholder="请正确输入您的班级名称">
-            </li>
+                <li>
+                    <span class="float-l">毕业班级</span>
+                    <input class="float-l" type="text" v-model='GClass' placeholder="请正确输入您的班级名称">
+                </li>
 
-            <li><span class="float-l">手机号码</span>
-                <input class="float-l" type="tel" v-model='tel' placeholder="请正确输入您的手机号码">
-            </li>
+                <li><span class="float-l">手机号码</span>
+                    <input class="float-l" type="tel" v-model='tel' placeholder="请正确输入您的手机号码">
+                </li>
 
 
-            <li>
-                <span class="float-l">电子邮箱</span>
-                <input class="float-l" type="email" v-model='email' placeholder="请正确输入您的邮箱">
-            </li>
+                <li>
+                    <span class="float-l">电子邮箱</span>
+                    <input class="float-l" type="email" v-model='email' placeholder="请正确输入您的邮箱">
+                </li>
 
-            <li><span class="float-l">登录密码</span>
-                <input class="float-l" type="password" v-model='password' placeholder="请输入密码">
-            </li>
+                <li><span class="float-l">登录密码</span>
+                    <input class="float-l" type="password" v-model='password' placeholder="请输入密码">
+                </li>
 
-            <li><span class="float-l">确认密码</span>
-                <input class="float-l" type="password" v-model='CPassword' placeholder="请再次输入密码">
-            </li>
-        </ul>
-        <li class="LP-li"><input type="checkbox" checked="checked"> &nbsp;我已阅读并同意相关服务条款和隐私政策</li>
+                <li><span class="float-l">确认密码</span>
+                    <input class="float-l" type="password" v-model='CPassword' placeholder="请再次输入密码">
+                </li>
+            </ul>
+            <li class="LP-li"><input type="checkbox" checked="checked"> &nbsp;我已阅读并同意相关服务条款和隐私政策</li>
 
-        <input class="LP-submit" type="button" name="" value="立即注册" @click="submit">
+            <input class="LP-submit" type="button" name="" value="立即注册" @click="submit">
 
-        <p class="LP-p">已经拥有账号，<a href="index.html">去登录</a> </p>
+            <p class="LP-p">已经拥有账号，<a href="../index.html">去登录</a> </p>
 
-    </div>
-    <script>
-        var app=new Vue({
-            el:'#LoginPage',
-            data:{
-                name:'',
-                school:'',
-                GClass:'',
-                tel:'',
-                email:'',
-                password:'',
-                CPassword:'',
-            },
-            methods:{
-                submit() {
-                    var isAlert = 0;
-                    if (this.name === '' && isAlert==0) {
-                        alert('请正确输入姓名');
-                        isAlert = 1;
-                    }
-                    if (this.school === '' && isAlert==0) {
-                        alert('请正确输入学校');
-                        isAlert = 1;
-                    }
-                    if (this.GClass === '' && isAlert==0) {
-                        alert('请正确输入班级');
-                        isAlert = 1;
-                    }
-                    if (this.tel === '' && isAlert==0) {
-                        alert('请正确输入电话号码');
-                        isAlert = 1;
-                    }
-                    if (this.email === '' && isAlert==0) {
-                        alert('请正确输入邮箱地址');
-                        isAlert = 1;
-                    }
-                    if (this.password === '' && isAlert==0) {
-                        alert('请正确输入密码');
-                        isAlert = 1;
-                    }
-                    if (this.CPassword === '' && isAlert==0) {
-                        alert('请再次输入密码');
-                        isAlert = 1;
-                    }
-                    if(isAlert==0){
-                        alert('注册成功');
-                        window.open('index.html', '_self')
-                    }
-                    return;
+        </div>
+        <script>
+            var app = new Vue({
+                el: '#LoginPage',
+                data: {
+                    name: '',
+                    school: '',
+                    GClass: '',
+                    tel: '',
+                    email: '',
+                    password: '',
+                    CPassword: '',
                 },
+                methods: {
+                    submit() {
+                        var isAlert = 0;
+                        if (this.name === '' && isAlert == 0) {
+                            alert('请正确输入姓名');
+                            isAlert = 1;
+                        }
+                        if (this.school === '' && isAlert == 0) {
+                            alert('请正确输入学校');
+                            isAlert = 1;
+                        }
+                        if (this.GClass === '' && isAlert == 0) {
+                            alert('请正确输入班级');
+                            isAlert = 1;
+                        }
+                        if (this.tel === '' && isAlert == 0) {
+                            alert('请正确输入电话号码');
+                            isAlert = 1;
+                        }
+                        if (this.email === '' && isAlert == 0) {
+                            alert('请正确输入邮箱地址');
+                            isAlert = 1;
+                        }
+                        if (this.password === '' && isAlert == 0) {
+                            alert('请正确输入密码');
+                            isAlert = 1;
+                        }
+                        if (this.CPassword === '' && isAlert == 0) {
+                            alert('请再次输入密码');
+                            isAlert = 1;
+                        }
+                        if (isAlert == 0) {
+                            alert('注册成功');
+                            window.open('index.html', '_self')
+                        }
+                        return;
+                    },
 
-            }
-        })
-    </script>
-</div>
+                }
+            })
+        </script>
+    </div>
 
 </body>
+
 </html>

@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>班级管理</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link href="https://cdn.bootcss.com/Swiper/4.5.0/css/swiper.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,9 +20,8 @@
             </div>
             <!--导航结束-->
             <div id="body">
-
                 <!--登陆窗口开始-->
-                <div id="zhuche" style=vertical-align:top;>
+                <div id="zhuche">
                     <div class="zhuchetiao">登录</div>
                     <form action="" method="">
                         <ul>
@@ -40,30 +39,28 @@
                         <!--<a href="" class="f-password">忘记密码?</a>-->
                     </form>
                 </div>
-                <!--登陆窗口结束-->
-
-
                 <!--照片轮播开始-->
-                <div id="lunbobk">
-                    <div id="lunbo">
-                        <ul class="list">
-                            <li class="item"></li>
-                            <li class="item"></li>
-                            <li class="item"></li>
-                            <li class="item"></li>
-                        </ul>
-                        <ul class="pointList">
-                            <li class="point active" data-index="0" ></li>
-                            <li class="point" data-index="1"></li>
-                            <li class="point" data-index="2"></li>
-                            <li class="point" data-index="3"></li>
-                        </ul>
-                        <button type="button" class="btn" id="gopre"><</button>
-                        <button type="button" class="btn" id="gonext">></button>
-
-
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src='image/海大轮播图1.jpg' />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src='image/海大轮播图2.jpg' />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src='image/海大轮播图3.jpg' />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src='image/海大轮播图4.jpg' />
+                        </div>
                     </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
                 </div>
+
                 <!--照片轮播结束-->
 
                 <!--公告开始-->
@@ -102,7 +99,9 @@
         </div>
         <!--登陆页面结束-->
 
+
         <script src="../js/bs.js"></script>
+        <script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>
         <script>
             var app = new Vue({
                 el: '#vue-app',
@@ -140,37 +139,47 @@
                             id: '123124343'
                         },
 
-
-
                     ],
-                    account:'',
-                    password:'',
+                    account: '',
+                    password: '',
                 },
                 methods: {
                     goArticleDetail(id) {
                         window.open('./page/detail.html' + '?id=' + id, '_self')
                     },
 
-                    toHomePage(){
+                    toHomePage() {
                         var isAlert = 0;
-                        if (this.account === '' && isAlert==0) {
+                        if (this.account === '' && isAlert == 0) {
                             alert('请输入账号');
                             isAlert = 1;
                         }
-                        if (this.password === '' && isAlert==0) {
+                        if (this.password === '' && isAlert == 0) {
                             alert('请输入密码');
                             isAlert = 1;
                         }
-                        if(this.password!= '' && this.account!= '')
-                        window.open('home.html', '_self')
+                        if (this.password != '' && this.account != '')
+                            window.open('./page/home.html', '_self')
                     },
-                    toLoginPage(){
-                        window.open('login.html','_self')
+                    toLoginPage() {
+                        window.open('./page/login.html', '_self')
                     }
                 },
             })
+            var mySwiper = new Swiper('.swiper-container', {
+                direction: 'horizontal', // 垂直切换选项
+                loop: true, // 循环模式选项
+                autoplay: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                // 如果需要分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            })        
         </script>
-    </div>
 </body>
 
 </html>
