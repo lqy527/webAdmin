@@ -20,6 +20,7 @@
 
 <body>
 <div id="HomePage">
+    <div class="exit" @click='goHome()'>返回</div>
     <div id="HP-head">
         <div class="HPH-title">
             15级电子信息科学与技术
@@ -28,7 +29,7 @@
     <div id="HP-body">
         <div class="HPB-navigation">
             <ul>
-                <li @click='changeIndex(0)'>
+                <li @click='goHome()'>
                     <span :style='{color:(index===0)?"red":"black" }'>班级主页</span></li>
                 <li @click='changeIndex(1)'>
                     <span :style='{color:(index===1)?"red":"black" }'>班级相册</span></li>
@@ -49,6 +50,20 @@
         </div>
     </div>
 </div>
+<script>
+    var app=new Vue({
+        el:'#HomePage',
+        data:{
+
+        },
+        methods:{
+            goHome(){
+                window.open('../index.html', '_self');
+            }
+
+        }
+    })
+</script>
 </body>
 
 </html>
